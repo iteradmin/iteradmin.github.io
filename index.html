@@ -19,7 +19,7 @@
 <div id="new">
     <Layout class="new">
         <Header style="background-color: #4b5470">
-            <Row type="flex" justify="space-around" align="middle" :gutter="20" id="news">
+            <Row type="flex" justify="space-around" align="middle" id="news">
                 <i-col>
                     <img src="./logo.png" alt="标题">
                 </i-col>
@@ -133,488 +133,483 @@
 <script src="https://cdn.bootcss.com/require.js/2.3.6/require.min.js"></script>
 <script src="https://echarts.baidu.com/build/dist/echarts.js"></script>
 <script>
-	new Vue({
-		el: '#new',
-		data() {
-			return {
-				title: '四川师范大学数据新闻作品',
-				text1: '一、态度分析',
-				text2: '二、行为分析',
-				text3: '三、强制性点赞对集赞行为的影响分析',
-				ec: null,
-				data: {
-					sex: {
-						tooltip: {
-							trigger: 'axis'
-						},
-						toolbox: {
-							show: true,
-							y: 'bottom',
-							feature: {
-								magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-								restore: {show: true},
-								saveAsImage: {show: true}
-							}
-						},
-						calculable: true,
-						legend: {
-							data: ['很反对', '可以接受', '无所谓', '支持']
-						},
-						xAxis: [
-							{
-								type: 'category',
-								splitLine: {show: false},
-								data: ['很反对', '可以接受', '无所谓', '支持']
-							}
-						],
-						yAxis: [
-							{
-								type: 'value',
-								position: 'left'
-							}
-						],
-						series: [
-							{
-								name: '男',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [180, 590, 570, 30]
-							},
-							{
-								name: '女',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [90, 1470, 1120, 40]
-							},
-							{
-								name: '合计',
-								type: 'line',
-								data: [270, 2060, 1690, 70]
-							},
-							{
-								name: '数据分析',
-								type: 'pie',
-								tooltip: {
-									trigger: 'item',
-									formatter: '{a} <br/>{b} : {c} ({d}%)'
-								},
-								center: [160, 130],
-								radius: [0, 50],
-								itemStyle: {
-									normal: {
-										labelLine: {
-											length: 20
-										}
-									}
-								},
-								data: [
-									{value: 270, name: '很反对'},
-									{value: 2060, name: '可以接受'},
-									{value: 1690, name: '无所谓'},
-									{value: 70, name: '支持'}
-								]
-							}
-						]
-					},
-					age: {
-						tooltip: {
-							trigger: 'axis'
-						},
-						toolbox: {
-							show: true,
-							y: 'bottom',
-							feature: {
-								magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-								restore: {show: true},
-								saveAsImage: {show: true}
-							}
-						},
-						calculable: true,
-						legend: {
-							data: ['很反对', '可以接受', '无所谓', '支持']
-						},
-						xAxis: [
-							{
-								type: 'category',
-								splitLine: {show: false},
-								data: ['很反对', '可以接受', '无所谓', '支持']
-							}
-						],
-						yAxis: [
-							{
-								type: 'value',
-								position: 'left'
-							}
-						],
-						series: [
-							{
-								name: '18以下',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [40, 120, 100, 10]
-							},
-							{
-								name: '18-24',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [120, 1440, 1100, 40]
-							},
-							{
-								name: '24-30',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [10, 80, 160, 0]
-							},
-							{
-								name: '30-40',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [40, 140, 140, 20]
-							},
-							{
-								name: '40以上',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [60, 250, 180, 0]
-							},
-							{
-								name: '合计',
-								type: 'line',
-								data: [270, 2060, 1690, 70]
-							},
-							{
-								name: '数据分析',
-								type: 'pie',
-								tooltip: {
-									trigger: 'item',
-									formatter: '{a} <br/>{b} : {c} ({d}%)'
-								},
-								center: [160, 130],
-								radius: [0, 50],
-								itemStyle: {
-									normal: {
-										labelLine: {
-											length: 20
-										}
-									}
-								},
-								data: [
-									{value: 1370, name: '很反对'},
-									{value: 1370, name: '可以接受'},
-									{value: 1370, name: '无所谓'},
-									{value: 2720, name: '支持'}
-								]
-							}
-						]
-					},
-					income: {
-						tooltip: {
-							trigger: 'axis'
-						},
-						toolbox: {
-							show: true,
-							y: 'bottom',
-							feature: {
-								magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-								restore: {show: true},
-								saveAsImage: {show: true}
-							}
-						},
-						calculable: true,
-						legend: {
-							data: ['很反对', '可以接受', '无所谓', '支持']
-						},
-						xAxis: [
-							{
-								type: 'category',
-								splitLine: {show: false},
-								data: ['很反对', '可以接受', '无所谓', '支持']
-							}
-						],
-						yAxis: [
-							{
-								type: 'value',
-								position: 'left'
-							}
-						],
-						series: [
-							{
-								name: '500以下',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [30, 150, 180, 20]
-							},
-							{
-								name: '500-2000',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [160, 1350, 930, 40]
-							},
-							{
-								name: '2000-5000',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [30, 420, 350, 10]
-							},
-							{
-								name: '5000-10000',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [30, 80, 180, 0]
-							},
-							{
-								name: '10000以上',
-								type: 'bar',
-								tooltip: {trigger: 'item'},
-								data: [10, 30, 20, 0]
-							},
-							{
-								name: '合计',
-								type: 'line',
-								data: [270, 2060, 1690, 70]
-							},
-							{
-								name: '数据分析',
-								type: 'pie',
-								tooltip: {
-									trigger: 'item',
-									formatter: '{a} <br/>{b} : {c} ({d}%)'
-								},
-								center: [160, 130],
-								radius: [0, 50],
-								itemStyle: {
-									normal: {
-										labelLine: {
-											length: 20
-										}
-									}
-								},
-								data: [
-									{value: 1370, name: '很反对'},
-									{value: 1370, name: '可以接受'},
-									{value: 1370, name: '无所谓'},
-									{value: 2720, name: '支持'}
-								]
-							}
-						]
-					},
-				}
-			};
-		},
-		methods: {
-			initChart(flag) {
-				var myChart = this.ec.init(document.getElementById('first'));
+    new Vue({
+        el: '#new',
+        data() {
+            return {
+                title: '四川师范大学数据新闻作品',
+                text1: '一、态度分析',
+                text2: '二、行为分析',
+                text3: '三、强制性点赞对集赞行为的影响分析',
+                ec: null,
+                data: {
+                    sex: {
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        toolbox: {
+                            show: true,
+                            y: 'bottom',
+                            feature: {
+                                magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
+                        calculable: true,
+                        legend: {
+                            data: ['很反对', '可以接受', '无所谓', '支持']
+                        },
+                        xAxis: [
+                            {
+                                type: 'category',
+                                splitLine: {show: false},
+                                data: ['很反对', '可以接受', '无所谓', '支持']
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                type: 'value',
+                                position: 'left'
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '男',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [180, 590, 570, 30]
+                            },
+                            {
+                                name: '女',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [90, 1470, 1120, 40]
+                            },
+                            {
+                                name: '数据分析',
+                                type: 'pie',
+                                tooltip: {
+                                    trigger: 'item',
+                                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                                },
+                                center: [225, 130],
+                                radius: [0, 50],
+                                itemStyle: {
+                                    normal: {
+                                        labelLine: {
+                                            length: 20
+                                        }
+                                    }
+                                },
+                                data: [
+                                    {value: 270, name: '很反对'},
+                                    {value: 2060, name: '可以接受'},
+                                    {value: 1690, name: '无所谓'},
+                                    {value: 70, name: '支持'}
+                                ]
+                            }
+                        ]
+                    },
+                    age: {
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        toolbox: {
+                            show: true,
+                            y: 'bottom',
+                            feature: {
+                                magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
+                        calculable: true,
+                        legend: {
+                            data: ['很反对', '可以接受', '无所谓', '支持']
+                        },
+                        xAxis: [
+                            {
+                                type: 'category',
+                                splitLine: {show: false},
+                                data: ['很反对', '可以接受', '无所谓', '支持']
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                type: 'value',
+                                position: 'left'
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '18以下',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [40, 120, 100, 10]
+                            },
+                            {
+                                name: '18-24',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [120, 1440, 1100, 40]
+                            },
+                            {
+                                name: '24-30',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [10, 80, 160, 0]
+                            },
+                            {
+                                name: '30-40',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [40, 140, 140, 20]
+                            },
+                            {
+                                name: '40以上',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [60, 250, 180, 0]
+                            },
+                            {
+                                name: '合计',
+                                type: 'line',
+                                data: [270, 2060, 1690, 70]
+                            },
+                            {
+                                name: '数据分析',
+                                type: 'pie',
+                                tooltip: {
+                                    trigger: 'item',
+                                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                                },
+                                center: [225, 130],
+                                radius: [0, 50],
+                                itemStyle: {
+                                    normal: {
+                                        labelLine: {
+                                            length: 20
+                                        }
+                                    }
+                                },
+                                data: [
+                                    {value: 1370, name: '很反对'},
+                                    {value: 1370, name: '可以接受'},
+                                    {value: 1370, name: '无所谓'},
+                                    {value: 2720, name: '支持'}
+                                ]
+                            }
+                        ]
+                    },
+                    income: {
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        toolbox: {
+                            show: true,
+                            y: 'bottom',
+                            feature: {
+                                magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                restore: {show: true},
+                                saveAsImage: {show: true}
+                            }
+                        },
+                        calculable: true,
+                        legend: {
+                            data: ['很反对', '可以接受', '无所谓', '支持']
+                        },
+                        xAxis: [
+                            {
+                                type: 'category',
+                                splitLine: {show: false},
+                                data: ['很反对', '可以接受', '无所谓', '支持']
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                type: 'value',
+                                position: 'left'
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '500以下',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [30, 150, 180, 20]
+                            },
+                            {
+                                name: '500-2000',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [160, 1350, 930, 40]
+                            },
+                            {
+                                name: '2000-5000',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [30, 420, 350, 10]
+                            },
+                            {
+                                name: '5000-10000',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [30, 80, 180, 0]
+                            },
+                            {
+                                name: '10000以上',
+                                type: 'bar',
+                                tooltip: {trigger: 'item'},
+                                data: [10, 30, 20, 0]
+                            },
+                            {
+                                name: '合计',
+                                type: 'line',
+                                data: [270, 2060, 1690, 70]
+                            },
+                            {
+                                name: '数据分析',
+                                type: 'pie',
+                                tooltip: {
+                                    trigger: 'item',
+                                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                                },
+                                center: [225, 130],
+                                radius: [0, 50],
+                                itemStyle: {
+                                    normal: {
+                                        labelLine: {
+                                            length: 20
+                                        }
+                                    }
+                                },
+                                data: [
+                                    {value: 1370, name: '很反对'},
+                                    {value: 1370, name: '可以接受'},
+                                    {value: 1370, name: '无所谓'},
+                                    {value: 2720, name: '支持'}
+                                ]
+                            }
+                        ]
+                    },
+                }
+            };
+        },
+        methods: {
+            initChart(flag) {
+                var myChart = this.ec.init(document.getElementById('first'));
 
-				var option = this.data[flag];
-				// 为echarts对象加载数据
-				myChart.setOption(option);
-			}
-		},
-		mounted() {
-			let self = this;
+                var option = this.data[flag];
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        },
+        mounted() {
+            let self = this;
 
-			// 路径配置
-			require.config({
-				paths: {
-					echarts: 'https://echarts.baidu.com/build/dist'
-				}
-			});
-			// 使用
-			require(
-					[
-						'echarts',
-						'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
-						'echarts/chart/line',
-						'echarts/chart/radar',
-						'echarts/chart/pie'
-					],
-					function (ec) {
-						self.ec = ec;
-						(function (ec) {
-							var myChart = ec.init(document.getElementById('first'));
+            // 路径配置
+            require.config({
+                paths: {
+                    echarts: 'https://echarts.baidu.com/build/dist'
+                }
+            });
+            // 使用
+            require(
+                [
+                    'echarts',
+                    'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+                    'echarts/chart/line',
+                    'echarts/chart/radar',
+                    'echarts/chart/pie'
+                ],
+                function (ec) {
+                    self.ec = ec;
+                    (function (ec) {
+                        var myChart = ec.init(document.getElementById('first'));
 
-							var option = self.data.sex;
-							// 为echarts对象加载数据
-							myChart.setOption(option);
-						})(ec);
-						(function (ec) {// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document.getElementById('second'));
+                        var option = self.data.sex;
+                        // 为echarts对象加载数据
+                        myChart.setOption(option);
+                    })(ec);
+                    (function (ec) {// 基于准备好的dom，初始化echarts图表
+                        var myChart = ec.init(document.getElementById('second'));
 
-							var option = {
-								tooltip: {
-									trigger: 'axis',
-									axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-										type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-									}
-								},
-								legend: {
-									data: ['迫于人情压力，被动点赞', '对此活动好奇，感兴趣', '无所谓，顺手点赞，表示朕已阅', '其他']
-								},
-								calculable: true,
-								xAxis: [
-									{
-										type: 'value'
-									}
-								],
-								yAxis: [
-									{
-										type: 'category',
-										data: ['男', '女']
-									}
-								],
-								series: [
-									{
-										name: '迫于人情压力，被动点赞',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [320, 302]
-									},
-									{
-										name: '对此活动好奇，感兴趣',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [120, 132]
-									},
-									{
-										name: '无所谓，顺手点赞，表示朕已阅',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [220, 182]
-									},
-									{
-										name: '其他',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [150, 212]
-									}
-								]
-							};
+                        var option = {
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            legend: {
+                                data: ['迫于人情压力，被动点赞', '对此活动好奇，感兴趣', '无所谓，顺手点赞，表示朕已阅', '其他']
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: 'value'
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: 'category',
+                                    data: ['男', '女']
+                                }
+                            ],
+                            series: [
+                                {
+                                    name: '迫于人情压力，被动点赞',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [320, 302]
+                                },
+                                {
+                                    name: '对此活动好奇，感兴趣',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [120, 132]
+                                },
+                                {
+                                    name: '无所谓，顺手点赞，表示朕已阅',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [220, 182]
+                                },
+                                {
+                                    name: '其他',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [150, 212]
+                                }
+                            ]
+                        };
 
 
-							// 为echarts对象加载数据
-							myChart.setOption(option);
-						})(ec);
-						(function (ec) {// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document.getElementById('second2'));
+                        // 为echarts对象加载数据
+                        myChart.setOption(option);
+                    })(ec);
+                    (function (ec) {// 基于准备好的dom，初始化echarts图表
+                        var myChart = ec.init(document.getElementById('second2'));
 
-							var option = {
-								tooltip: {
-									trigger: 'axis',
-									axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-										type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-									}
-								},
-								legend: {
-									data: ['迫于人情压力，被动点赞', '对此活动好奇，感兴趣', '无所谓，顺手点赞，表示朕已阅', '其他']
-								},
-								calculable: true,
-								xAxis: [
-									{
-										type: 'value'
-									}
-								],
-								yAxis: [
-									{
-										type: 'category',
-										data: ['男', '女']
-									}
-								],
-								series: [
-									{
-										name: '迫于人情压力，被动点赞',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [320, 302]
-									},
-									{
-										name: '对此活动好奇，感兴趣',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [120, 132]
-									},
-									{
-										name: '无所谓，顺手点赞，表示朕已阅',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [220, 182]
-									},
-									{
-										name: '其他',
-										type: 'bar',
-										stack: '总量',
-										itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
-										data: [150, 212]
-									}
-								]
-							};
-
-
-							// 为echarts对象加载数据
-							myChart.setOption(option);
-						})(ec);
-						(function (ec) {// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document.getElementById('third'));
-
-							var option = {
-								title: {
-									text: '预算 vs 开销（Budget vs spending）',
-									subtext: '纯属虚构'
-								},
-								tooltip: {
-									trigger: 'axis'
-								},
-								legend: {
-									orient: 'vertical',
-									x: 'right',
-									y: 'bottom',
-									data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
-								},
-								polar: [
-									{
-										indicator: [
-											{text: '销售（sales）', max: 6000},
-											{text: '管理（Administration）', max: 16000},
-											{text: '信息技术（Information Techology）', max: 30000},
-											{text: '客服（Customer Support）', max: 38000},
-											{text: '研发（Development）', max: 52000},
-											{text: '市场（Marketing）', max: 25000}
-										]
-									}
-								],
-								calculable: true,
-								series: [
-									{
-										name: '预算 vs 开销（Budget vs spending）',
-										type: 'radar',
-										data: [
-											{
-												value: [4300, 10000, 28000, 35000, 50000, 19000],
-												name: '预算分配（Allocated Budget）'
-											},
-											{
-												value: [5000, 14000, 28000, 31000, 42000, 21000],
-												name: '实际开销（Actual Spending）'
-											}
-										]
-									}
-								]
-							};
+                        var option = {
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            legend: {
+                                data: ['迫于人情压力，被动点赞', '对此活动好奇，感兴趣', '无所谓，顺手点赞，表示朕已阅', '其他']
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: 'value'
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: 'category',
+                                    data: ['男', '女']
+                                }
+                            ],
+                            series: [
+                                {
+                                    name: '迫于人情压力，被动点赞',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [320, 302]
+                                },
+                                {
+                                    name: '对此活动好奇，感兴趣',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [120, 132]
+                                },
+                                {
+                                    name: '无所谓，顺手点赞，表示朕已阅',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [220, 182]
+                                },
+                                {
+                                    name: '其他',
+                                    type: 'bar',
+                                    stack: '总量',
+                                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                                    data: [150, 212]
+                                }
+                            ]
+                        };
 
 
-							// 为echarts对象加载数据
-							myChart.setOption(option);
-						})(ec);
-					}
-			);
-		}
-	});
+                        // 为echarts对象加载数据
+                        myChart.setOption(option);
+                    })(ec);
+                    (function (ec) {// 基于准备好的dom，初始化echarts图表
+                        var myChart = ec.init(document.getElementById('third'));
+
+                        var option = {
+                            title: {
+                                text: '预算 vs 开销（Budget vs spending）',
+                                subtext: '纯属虚构'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                x: 'right',
+                                y: 'bottom',
+                                data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+                            },
+                            polar: [
+                                {
+                                    indicator: [
+                                        {text: '销售（sales）', max: 6000},
+                                        {text: '管理（Administration）', max: 16000},
+                                        {text: '信息技术（Information Techology）', max: 30000},
+                                        {text: '客服（Customer Support）', max: 38000},
+                                        {text: '研发（Development）', max: 52000},
+                                        {text: '市场（Marketing）', max: 25000}
+                                    ]
+                                }
+                            ],
+                            calculable: true,
+                            series: [
+                                {
+                                    name: '预算 vs 开销（Budget vs spending）',
+                                    type: 'radar',
+                                    data: [
+                                        {
+                                            value: [4300, 10000, 28000, 35000, 50000, 19000],
+                                            name: '预算分配（Allocated Budget）'
+                                        },
+                                        {
+                                            value: [5000, 14000, 28000, 31000, 42000, 21000],
+                                            name: '实际开销（Actual Spending）'
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+
+
+                        // 为echarts对象加载数据
+                        myChart.setOption(option);
+                    })(ec);
+                }
+            );
+        }
+    });
 </script>
 </body>
 </html>
