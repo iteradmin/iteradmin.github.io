@@ -36,13 +36,13 @@
         <Content>
             <Row type="flex" justify="space-around" align="top">
                 <i-col :xs="0" :lg="3">
-                    <Anchor show-ink :offset-top="50">
+                    <anchor show-ink :offset-top="50">
                         <anchor-link href="#news" :title="title">
                             <anchor-link href="#firsts" :title="text1"></anchor-link>
                             <anchor-link href="#seconds" :title="text2"></anchor-link>
                             <anchor-link href="#thirds" :title="text3"></anchor-link>
                         </anchor-link>
-                    </Anchor>
+                    </anchor>
                 </i-col>
                 <i-col :xs="24" :lg="18">
                     <Card style="min-width:350px">
@@ -395,7 +395,7 @@
             }
         },
         mounted() {
-            let self = this;
+            var self = this;
 
             // 路径配置
             require.config({
