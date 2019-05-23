@@ -10,6 +10,7 @@
     <meta name="viewport"
           content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <link href="https://cdn.bootcss.com/iview/3.4.1/styles/iview.css" rel="stylesheet">
+    <link rel="stylesheet" href="./iconfont.css">
     <style>
         .new {
             padding-bottom: 20px;
@@ -22,6 +23,14 @@
 
         .m-t-20 {
             margin-top: 20px;
+        }
+
+        .m-r-10 {
+            margin-right: 10px;
+        }
+
+        .iconfont:hover {
+            color: blue
         }
     </style>
     <title>四川师范大学数据新闻作品</title>
@@ -58,15 +67,24 @@
                 </i-col>
                 <i-col :xs="24" :lg="18">
                     <Card style="min-width:350px">
-                        <div slot="title">
-                            <h1 style="margin-bottom: 10px;">数说|朋友圈集赞之“你不知道的秘密”</h1>
-                            <i-button type="dashed" size="small" shape="circle">编辑：杨亚婷</i-button>
-                            <i-button type="text" size="small" shape="circle">2019年05月10日 16:46:49</i-button>
+                        <Row slot="title" type="flex" align="center" justify="space-between">
+                            <i-col :span="24">
+                                <h1 style="margin-bottom: 10px;">数说|朋友圈集赞之“你不知道的秘密”</h1>
+                            </i-col>
+                            <i-col>
+                                <i-button type="text" size="small">浏览12225次</i-button>
+                            </i-col>
+                            <i-col>
+                                <span class="iconfont m-r-10 icon_likegood icon-icon_likegood"></span>
+                                <span class="iconfont m-r-10 icon_message icon-icon_message"></span>
+                                <span class="iconfont m-r-10 icon-fenxiang"></span>
+                            </i-col>
+
                             <!--<i-button type="primary" size="small" shape="circle">来源： 新华网</i-button>-->
-                        </div>
-                        <template slot="extra">
-                            <Avatar size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
-                        </template>
+                        </Row>
+                        <!--<template slot="extra">-->
+                        <!--<Avatar size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>-->
+                        <!--</template>-->
                         <section id="firsts">
                             <Row type="flex" align="top" style="margin-top:10px;margin-bottom: 10px;">
                                 <i-col>
