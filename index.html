@@ -52,6 +52,7 @@
                             <anchor-link href="#thirds" :title="text3"></anchor-link>
                             <anchor-link href="#fours" :title="text4"></anchor-link>
                             <anchor-link href="#fives" :title="text5"></anchor-link>
+                            <anchor-link href="#sixs" :title="text6"></anchor-link>
                         </anchor-link>
                     </anchor>
                 </i-col>
@@ -66,10 +67,10 @@
                         <template slot="extra">
                             <Avatar size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
                         </template>
-                        <section>
+                        <section id="firsts">
                             <Row type="flex" align="top" style="margin-top:10px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>今天，你集赞了吗？</h3>
+                                    <h3>{{text1}}</h3>
                                 </i-col>
                                 <i-col>
                                     <p class="t-l-2 m-t-20">
@@ -125,10 +126,10 @@
                                 </i-col>
                             </Row>
                         </section>
-                        <section>
+                        <section id="seconds">
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>一：谁在点赞？</h3>
+                                    <h3>{{text2}}</h3>
                                 </i-col>
                                 <i-col :span="24">
                                     <p class="t-l-2 m-t-20">
@@ -145,10 +146,10 @@
                                 </i-col>
                             </Row>
                         </section>
-                        <section>
+                        <section id="thirds">
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>二：你怎么看？</h3>
+                                    <h3>{{text3}}</h3>
                                 </i-col>
                                 <i-col :span="24">
                                     <p class="t-l-2 m-t-20">
@@ -156,11 +157,6 @@
                                     </p>
                                 </i-col>
                             </Row>
-                            <!--<Row type="flex" align="top" id="firsts" style="margin-top:30px;margin-bottom: 10px;">-->
-                            <!--<i-col>-->
-                            <!--<h3>{{text1}}</h3>-->
-                            <!--</i-col>-->
-                            <!--</Row>-->
                             <div id="first" style="height:400px">图表1</div>
                             <Row type="flex" justify="center" align="middle" :gutter="20">
                                 <i-col>
@@ -196,10 +192,10 @@
                                 </i-col>
                             </Row>
                         </section>
-                        <section>
+                        <section id="fours">
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>三：该怎么办？</h3>
+                                    <h3>{{text4}}</h3>
                                 </i-col>
                                 <i-col :span="24">
                                     <p class="m-t-20">
@@ -217,11 +213,6 @@
                                     </p>
                                 </i-col>
                             </Row>
-                            <!--<Row type="flex" align="top" id="seconds" style="margin-top:30px;margin-bottom: 10px;">-->
-                            <!--<i-col>-->
-                            <!--<h3>{{text2}}</h3>-->
-                            <!--</i-col>-->
-                            <!--</Row>-->
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
                                     <h4>{{'不同性别点赞原因'}}</h4>
@@ -244,11 +235,6 @@
                                     </p>
                                 </i-col>
                             </Row>
-                            <!--<Row type="flex" align="top" id="fours" style="margin-top:30px;margin-bottom: 10px;">-->
-                            <!--<i-col>-->
-                            <!--<h3>{{text4}}</h3>-->
-                            <!--</i-col>-->
-                            <!--</Row>-->
                             <div id="four" style="height:400px">图表4</div>
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col :span="24">
@@ -269,11 +255,6 @@
                                     </p>
                                 </i-col>
                             </Row>
-                            <!--<Row type="flex" align="top" id="thirds" style="margin-top:30px;margin-bottom: 10px;">-->
-                            <!--<i-col>-->
-                            <!--<h3>{{text3}}</h3>-->
-                            <!--</i-col>-->
-                            <!--</Row>-->
                             <div id="third" style="height:400px">图表3</div>
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col :span="24">
@@ -292,11 +273,6 @@
                                     </p>
                                 </i-col>
                             </Row>
-                            <!--<Row type="flex" align="top" id="fives" style="margin-top:30px;margin-bottom: 10px;">-->
-                            <!--<i-col>-->
-                            <!--<h3>{{text5}}</h3>-->
-                            <!--</i-col>-->
-                            <!--</Row>-->
                             <div id="five" style="height:400px">图表5</div>
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col :span="24">
@@ -312,10 +288,10 @@
                                 </i-col>
                             </Row>
                         </section>
-                        <section>
+                        <section id="fives">
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>四、推荐方案</h3>
+                                    <h3>{{text5}}</h3>
                                 </i-col>
                                 <i-col :span="24">
                                     <p class="t-l-2 m-t-20">
@@ -327,10 +303,10 @@
                                 </i-col>
                             </Row>
                         </section>
-                        <section>
+                        <section id="sixs">
                             <Row type="flex" align="top" style="margin-top:30px;margin-bottom: 10px;">
                                 <i-col>
-                                    <h3>“活动有风险，集赞需谨慎”</h3>
+                                    <h3>{{text6}}</h3>
                                 </i-col>
                                 <i-col :span="24">
                                     <p class="t-l-2 m-t-20">
@@ -386,11 +362,12 @@
 		data() {
 			return {
 				title: '四川师范大学数据新闻作品',
-				text1: '一、态度分析',
-				text2: '二、行为分析',
-				text3: '三、强制性点赞对集赞行为的影响分析',
-				text4: '四、动力阻力',
-				text5: '五、满意度调查',
+				text1: '今天，你集赞了吗？',
+				text2: '一：谁在点赞？',
+				text3: '二：你怎么看？',
+				text4: '三：该怎么办？',
+				text5: '四、推荐方案',
+				text6: '“活动有风险，集赞需谨慎”',
 				ec: null,
 				data: {
 					sex: {
