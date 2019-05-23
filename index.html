@@ -14,6 +14,15 @@
         .new {
             padding-bottom: 20px;
         }
+
+        .t-l-2 {
+            text-indent: 2em;
+            line-height: 24px;
+        }
+
+        .m-t-20 {
+            margin-top: 20px;
+        }
     </style>
     <title>四川师范大学数据新闻作品</title>
 </head>
@@ -49,14 +58,84 @@
                 <i-col :xs="24" :lg="18">
                     <Card style="min-width:350px">
                         <div slot="title">
-                            <h3 style="margin-bottom: 10px;">四川师范大学数据新闻作品</h3>
+                            <h1 style="margin-bottom: 10px;">数说|朋友圈集赞之“你不知道的秘密”</h1>
                             <i-button type="dashed" size="small" shape="circle">编辑：杨亚婷</i-button>
                             <i-button type="text" size="small" shape="circle">2019年05月10日 16:46:49</i-button>
-                            <i-button type="primary" size="small" shape="circle">来源： 新华网</i-button>
+                            <!--<i-button type="primary" size="small" shape="circle">来源： 新华网</i-button>-->
                         </div>
                         <template slot="extra">
                             <Avatar size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
                         </template>
+                        <Row type="flex" align="top" id="firsts" style="margin-top:10px;margin-bottom: 10px;">
+                            <i-col>
+                                <h3>今天，你集赞了吗？</h3>
+                            </i-col>
+                            <i-col>
+                                <p class="t-l-2 m-t-20">
+                                    <b>“快快快，朋友圈第一条，帮我点个赞！”</b>
+                                </p>
+                                <p class="t-l-2">
+                                    每天早晨醒来后，先打开手机刷刷朋友圈；聚会吃饭上菜后，所有人不约而同先拍个照发个状态；等红灯时的几十秒也要抓紧时间刷微博看看又有什么新鲜事……这已经是我们生活中司空见惯的场景，社交媒体以其沟通的便利性和及时性，逐渐成为我们生活中不可或缺的一部分。而随着社交媒体的兴起，“点赞”也已然成为朋友圈最热的互动：手指轻轻一点，就能完成一次互动，缩短与朋友之间的距离，传达自己的态度看法。
+                                </p>
+                                <p class="t-l-2">
+                                    风靡朋友圈的“点赞”互动也让众多商家窥到了商机。朋友圈集赞优惠活动迅速发展为商家营销推广的一种低成本手段。大到出国旅游机会，小到奶茶、电风扇等生活用品，发个朋友圈，集满一定赞数，就能免费得到诸多优惠。此等“好事”引得无数人抱着“宁可错发一千，绝不放过一个”心态变身“集赞狂魔”。我们先来看一个例子：
+                                </p>
+                            </i-col>
+                            <i-col :span="24" class="m-t-20">
+                                <Row type="flex" align="middle" justify="center">
+                                    <video height="400px;" width="800px;" src="movie.ogg" controls="controls">
+                                        您的浏览器不支持 video 标签。
+                                    </video>
+                                </Row>
+                            </i-col>
+                            <i-col>
+                                <p class="t-l-2 m-t-20">
+                                    从上图的对话中我们就可以了解到集赞活动的相关信息，我们也使用网络问卷调查了朋友圈集赞的情况，我们首先调查了集赞活动的普及度、影响力、发起情况和商业效果四个层面：
+                                </p>
+                            </i-col>
+                            <i-col :span="24">
+                                <img width="100%" src="./img/1.png" alt="调查概况">
+                            </i-col>
+                            <i-col>
+                                <p class="m-t-20">
+                                    <b>1、我朋友圈都被这个集赞刷屏了——集赞活动的普及度</b>
+                                </p>
+                                <p class="t-l-2">
+                                    有一半受调查者的朋友圈中有集赞现象但是并不多，但是就没有的人数只占约百分之六，可见朋友圈积赞现象相当普遍，广度十分到位，但深度还没有很到位。
+                                </p>
+                                <p class="m-t-20">
+                                    <b>2、啊，我点赞点到手抽筋——集赞活动的影响力</b>
+                                </p>
+                                <p class="t-l-2">
+                                    经调查，有九成的受访者都为别人点过赞，可见集赞活动在朋友圈中的影响力还是比较大的。
+                                </p>
+                                <p class="m-t-20">
+                                    <b> 3、你们要集吗？——集赞活动的发起情况</b>
+                                </p>
+                                <p class="t-l-2">
+                                    即使有九成受访者表示为他人点过赞，但依然有一半的受众没有发起过集赞，可见虽然朋友圈积赞现象火热，但受众还是会结合自己的需求、交际能力等因素来决定是否主动发起朋友圈积赞活动，不会随意的发起集赞活动。</p>
+                                <p class="m-t-20">
+                                    <b>4.我现在已经是她们家的常客了——集赞活动的商业效果</b>
+                                </p>
+                                <p class="t-l-2">
+                                    大部分受众在主动参与积赞活动并且活动之后会再次消费，但仍有大于1/4的受众不再进行再次消费，这种情况证明朋友圈积赞活动价值低，后面会分析探究这1/4的人群不再次消费的原因，让商家能够针对不同的消费群体指定相应的积赞活动，以此提高积赞活动的商业价值。</p>
+                                <p class="t-l-2">
+                                    经过对集赞活动的普及度、影响力、适用范围和商业效果的分析可见，集赞活动现在已经成为大众接受并认可的商业模式了，集赞活动的发起者是商家，那是谁在点赞呢？ </p>
+                            </i-col>
+                        </Row>
+                        <Row type="flex" align="top" id="firsts" style="margin-top:30px;margin-bottom: 10px;">
+                            <i-col>
+                                <h3>一：谁在点赞？</h3>
+                            </i-col>
+                            <i-col>
+                                <p class="t-l-2 m-t-20">
+                                    此次问卷调查共收得有效问卷4090份，我们将人群分为三个类别，分别是收入、年龄、性别：
+                                </p>
+                            </i-col>
+                            <i-col :span="24">
+                                <img width="100%" src="./img/2.png" alt="谁在点赞">
+                            </i-col>
+                        </Row>
                         <Row type="flex" align="top" id="firsts" style="margin-top:30px;margin-bottom: 10px;">
                             <i-col>
                                 <h3>{{text1}}</h3>
