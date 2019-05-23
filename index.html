@@ -32,6 +32,10 @@
         .iconfont:hover {
             color: blue
         }
+
+        .c-blue {
+            color: blue
+        }
     </style>
     <title>四川师范大学数据新闻作品</title>
 </head>
@@ -75,12 +79,15 @@
                                 <i-button type="text" size="small">浏览12225次</i-button>
                             </i-col>
                             <i-col>
-                                <span class="iconfont m-r-10 icon_likegood icon-icon_likegood"></span>
-                                <span class="iconfont m-r-10 icon_message icon-icon_message"></span>
-                                <span class="iconfont m-r-10 icon-fenxiang"></span>
+                                <span class="iconfont m-r-10 icon_likegood icon-icon_likegood"
+                                      :class="active.a?'c-blue':''" @click="actives('a')"></span>
+                                <span class="iconfont m-r-10 icon_message icon-icon_message"
+                                      :class="active.b?'c-blue':''" @click="actives('b')"></span>
+                                <span class="iconfont m-r-10 icon-fenxiang"
+                                      :class="active.c?'c-blue':''" @click="actives('c')"></span>
                             </i-col>
 
-                            <!--<i-button type="primary" size="small" shape="circle">来源： 新华网</i-button>-->
+                            <!--<i-button type=" primary" size="small" shape="circle">来源： 新华网</i-button>-->
                         </Row>
                         <!--<template slot="extra">-->
                         <!--<Avatar size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>-->
@@ -387,6 +394,11 @@
 				text5: '四、推荐方案',
 				text6: '“活动有风险，集赞需谨慎”',
 				ec: null,
+				active: {
+					a: false,
+					b: false,
+					c: false
+				},
 				data: {
 					sex: {
 						tooltip: {
@@ -632,6 +644,10 @@
 				var option = this.data[flag];
 				// 为echarts对象加载数据
 				myChart.setOption(option);
+			},
+			actives(item) {
+				this.active[item] = !this.active[item];
+				this.$Message.success('正在建设中');
 			}
 		},
 		mounted() {
