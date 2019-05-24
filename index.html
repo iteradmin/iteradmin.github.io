@@ -12,6 +12,10 @@
     <link href="https://cdn.bootcss.com/iview/3.4.1/styles/iview.css" rel="stylesheet">
     <link rel="stylesheet" href="./icon/iconfont.css">
     <style>
+        body {
+            line-height: 2;
+        }
+
         .new {
             padding-bottom: 20px;
         }
@@ -61,7 +65,7 @@
         <Divider></Divider>
         <Content>
             <Row type="flex" justify="center" align="top">
-                <i-col :xs="0" :lg="3">
+                <i-col :xs="0" :lg="4">
                     <anchor :offset-top="50" container="body">
                         <anchor-link href="#news" :title="title">
                             <anchor-link href="#firsts" :title="text1"></anchor-link>
@@ -73,7 +77,7 @@
                         </anchor-link>
                     </anchor>
                 </i-col>
-                <i-col :xs="24" :lg="{span:15,offset:2}">
+                <i-col :xs="24" :lg="{span:15,offset:1}">
                     <Card style="min-width:350px">
                         <Row slot="title" type="flex" align="middle" justify="space-between">
                             <i-col :span="24">
