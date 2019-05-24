@@ -56,7 +56,7 @@
         </Header>
         <Divider></Divider>
         <Content>
-            <Row type="flex" justify="space-around" align="top">
+            <Row type="flex" justify="center" align="top">
                 <i-col :xs="0" :lg="3">
                     <anchor :offset-top="50" container="body">
                         <anchor-link href="#news" :title="title">
@@ -69,7 +69,7 @@
                         </anchor-link>
                     </anchor>
                 </i-col>
-                <i-col :xs="24" :lg="18">
+                <i-col :xs="24" :lg="{span:15,offset:2}">
                     <Card style="min-width:350px">
                         <Row slot="title" type="flex" align="middle" justify="space-between">
                             <i-col :span="24">
